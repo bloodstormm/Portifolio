@@ -1,0 +1,237 @@
+@import url(main.css);
+
+/* 
+------------------
+home
+------------------
+*/
+.home {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Navbar */
+nav {
+    width: 84%;
+    margin: auto;
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+nav a {
+    display: contents;
+}
+
+.logo {
+    width: 20%;
+    cursor: pointer;
+}
+
+/* Botão Mudar tema */
+#icon-theme {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    width: 20px;
+    transition: transform 0.5s ease;
+}
+
+#icon-theme:hover,
+#icon-theme:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.nav-items {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-items ul li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.nav-items ul li a {
+    transition: all 100ms linear;
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid;
+    color: var(--accent-color);
+}
+
+/* Texto da página home */
+.texto {
+    cursor: default;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.texto h1{
+    color: var(--secundary-color);
+    font-size: 60px;
+}
+
+.texto span{
+    color: var(--accent-color);
+}
+
+.texto p {
+    padding-top: 5px;
+    color: var(--third-color);
+    line-height: 22px;
+}
+
+.texto a {
+    transition: all 150ms linear;
+    background: var(--secundary-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+/* Botão Curriculo */
+.texto a:hover {
+    box-shadow: 0 0 10px #006e72, 0 0 20px #00979c, 0 0 50px #00adb3;
+    background: var(--accent-color);
+}
+
+/* 
+------------------
+Imagem animada
+------------------
+*/
+.img-box {
+    width: 45%;
+    height: 80%;
+    right: 100px;
+    bottom: 0;
+    position: absolute;
+}
+
+.img-box img {
+    height: 100%;
+    bottom: 0;
+    position: absolute;
+    left: 70% ;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.img-box .mancha {
+    height: 90%;
+}
+
+.img-box:hover .mancha {
+    bottom: 40px;
+}
+
+.img-box:hover .nicolas {
+    left: 65%;
+}
+
+/* Botoes de redes sociais */
+.social-medias {
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.social-medias a {
+    transition: all 250ms linear;
+    font-size: 30px;
+    color: var(--third-color);
+    margin-right: 20px;
+}
+
+.social-medias a:hover {
+    color: var(--accent-color);
+}
+
+nav .fa {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    .texto h1 {
+        font-size: 40px;
+    }
+    .img-box {
+        right: 50px;
+        height: 60%;
+        bottom: 20%;
+    }
+}
+
+@media (max-width: 845px) {
+    .texto h1 {
+        font-size: 40px;
+    }
+    .img-box {
+        height: 30%;
+        left: 20%;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 770px) {
+
+
+    /* Escondendo o menu */
+    .home {
+        overflow-x: hidden;
+    }
+
+    .texto h1 {
+        font-size: 40px;
+    }
+
+    .nav-items {
+        position: absolute;
+        height: 100vh;
+        width: 300px;
+        background: var(--primary-color);
+        top: 0;
+        right: -300px;
+        z-index: 2;
+        font-size: 18px;
+        transition: 600ms;
+    }
+    .nav-items ul li {
+        text-align: center;
+        display: block;
+        padding-top: 10px;
+        margin-bottom: 70px;
+    }
+
+    nav .fa {
+        display: flex;
+        margin: 20px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+    
+    .nav-items ul {
+        transition: 550ms ease-in;
+        animation: all 0.5s ease-in;
+        text-align: center;
+        padding: 20px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 375px) {
+    .img-box {
+        height: 0px;
+    }
+}

@@ -1,0 +1,78 @@
+@import url(main.css);
+/* 
+------------------
+CONTATO
+------------------
+*/
+.contato {
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.contato .container {
+    color: var(--third-color);
+    width: 84%;
+    margin: auto;
+}
+
+.contato-texto {
+    margin: auto;
+    text-align: center;
+    max-width: 60%;
+}
+
+.contato .social-medias {
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.contato-info-item p{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.social-medias span {
+    font-size: 25px;
+    color: var(--third-color);
+}
+
+.contato .social-medias a {
+    margin: 0;
+    padding: 2px;
+    transition: all 250ms linear;
+    background: none;
+    font-size: 30px;
+    color: var(--third-color);
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.contato .social-medias a:hover {
+    box-shadow: none;
+    background: none;
+    color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.contato-content {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.botao-formulario-contato {
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    
+    .contato-info-item p{
+        font-size: 19px;
+    }
+
+    .contato-texto {
+        max-width: 100%;
+    }
+}

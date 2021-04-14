@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/sobre-mim.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <title>Portifólio</title>
+</head>
+
+<body>
+    <!-- Fundo animado pelo JS/CSS -->
+    <div class="bg-animated">
+    </div>
+
+    <div class="home" id='home' data-aos="zoom-out">
+        <nav>
+            <a href="#home"><img src="assets/img/logo-dark.png" alt="logo-dark" class='logo' id="logo"></a>
+            <div class="nav-items" id="navItems">
+                <i class="fa fa-times" id="closeButtonMenu"></i>
+                <ul>
+                    <li><a href="#portifolio" class="navContent">PORTIFÓLIO</a></li>
+                    <li><a href="#skills" class="navContent">HABILIDADES</a></li>
+                    <li><a href="#sobre-mim" class="navContent">SOBRE MIM</a></li>
+                    <li><a href="#contato" class="navContent">CONTATO</a></li>
+                </ul>
+            </div>
+
+            <img src="assets/img/moon.png" id='icon-theme'>
+            <i class="fa fa-bars" id="menuButton"></i>
+        </nav>
+        <div class="texto">
+            <h1>Olá! Eu sou <span>Nícolas</span></h1>
+            <p>
+                Este é o meu site de portifólio oficial para mostrar todos os meus
+                projetos <br> relacionados a Tecnologia e Design.
+            </p>
+
+            <a href="assets/Curriculo/Curriculo.pdf" target="_blank">
+                Ver Currículo
+            </a>
+        </div>
+
+        <div class="img-box">
+            <img src="assets/img/mancha.png" class="mancha">
+            <img src="assets/img/nicolas.png" class="nicolas">
+        </div>
+
+        <div class="social-medias">
+            <a href="https://www.linkedin.com/in/n%C3%ADcolas-malachias/" target="_blank" id="linkedin"><i
+                    class="fab fa-linkedin"></i>
+                <a href="https://www.instagram.com/_nicolasantoss/" target="_blank" id="instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://github.com/bloodstormm" target="_blank" id="github"><i
+                        class="fab fa-github"></i></a></a>
+        </div>
+    </div>
+
+    <section class="page">
+        <!-- Minhas habilidades -->
+        <div class="skills" id="skills" data-aos="fade-right" data-aos-duration="900">
+            <div class="containerSkills">
+                <div class="titulo">
+                    <h1>Minhas Habilidades</h1>
+                    <p>Visão geral de habilidades</p>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="skillColumn">
+                        <i class="fab fa-html5" style="color: #EC6231;"></i>
+                        <p>
+                            Possuo conhecimento básico em HTML5, com cerca de
+                            5 sites criados inteiramente em HTML.
+                        </p>
+                    </div>
+
+                    <div class="skillColumn">
+                        <i class="fab fa-css3-alt" style="color: #2965f1;"></i>
+                        <p>
+                            Uma das minhas maiores paixões, não me vejo no mundo do Design
+                            sem estilizar a aplicação que estou desenvolvendo. Em CSS, possuo
+                            conhecimento intermediário
+                        </p>
+                    </div>
+
+                    <div class="skillColumn">
+                        <i class="fab fa-js" style="color: #F0DB4F;"></i>
+                        <p>
+                            Tenho uma boa relação com JavaScript, uma linguagem límpida e de
+                            facil uso. Possuo conhecimento intermediário com 2 projetos já criados
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="skillColumn">
+                        <i class="fab fa-python" style="color: #306998;"></i>
+                        <p>
+                            Python foi a minha primeira linguagem de programação, e, atualmente
+                            é a linguagem na qual tenho mais afinidade.
+                        </p>
+                    </div>
+
+
+                    <div class="skillColumn">
+                        <i class="fab fa-php" style="color: #787CB5;"></i>
+                        <p>
+                            Junto ao meu aprendizado de HTML/CSS, desenvolvi conhecimento
+                            em PHP, principalmente para realizar ações de Login e controle de
+                            usuários recebidos de um formulário.
+                        </p>
+                    </div>
+
+                    <div class="skillColumn">
+                        <img src="https://img.icons8.com/color/48/000000/flutter.png"
+                            style="margin-bottom: 15px; width: 20%;" />
+                        <p>
+                            Recentemente decidi embarcar no desenvolvimento Mobile também.
+                            Com 1 projeto criado, desenvolvi um App com as tecnologias mais recentes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Minhas habilidades -->
+
+        <!-- SOBRE MIM -->
+        <div class="sobre-mim" id="sobre-mim" data-aos="fade-up" data-aos-duration="1200">
+            <div class="titulo">
+                <h1>Sobre mim</h1>
+                <p>As principais informações</p>
+            </div>
+            <div class="row">
+                <div class="sobre-img">
+                    <img src="assets/img/nicolas2.jpg">
+                </div>
+
+                <div class="sobre-texto">
+                    <p>
+                        Olá, me chamo Nícolas Malachias. Atualmente estou estudando <span>Desenvolvimento
+                        De Sistemas</span> e pretendo me tornar um desenvolvedor <span>Front-End/Back-end</span> ou
+                        um Web
+                        Designer. Tenho 17 anos e moro em Taubaté, SP.
+                    </p>
+
+                    <p>
+                        Desde criança, gosto muito de usar tudo o que é relacionado a tecnologia, e hoje
+                        desejo <span>tornar o hobbie de criança em uma profissão.</span>
+                    </p>
+
+                </div>
+
+
+            </div>
+            <!-- Botões de escolaridade -->
+            <div class="row">
+                <div class="sobre-botoes">
+                    <a class="escolaridade active" data-target='.educacao'>Educação</a>
+                    <a class="escolaridade" data-target='.experiencias'>Experiências</a>
+                </div>
+            </div>
+            <!-- // Botões de escolaridade -->
+
+            <!-- Educação -->
+            <div class="educacao tab-content active" data-aos="fade-up">
+                <!-- Conteudo da timeline 1-->
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <span>Jan, 2018 - Dez, 2020</span>
+                        <h3>Idioma: Inglês</h3>
+                        <h4>PróLínguas Escola de Idiomas</h4>
+                        <p>
+                            Nível B1 (intermediário básico)
+                            de acordo com o Quadro Europeu
+                            Comum de Referência para
+                            línguas (CEFR)
+                        </p>
+                    </div>
+                </div>
+                <!-- //Conteudo da timeline 1-->
+                <!-- Conteudo da timeline 1-->
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <span>Fev, 2019 - Dez, 2021</span>
+                        <h3>Ensino Médio</h3>
+                        <h4>EMEFM Professor José Ezequiel de Souza</h4>
+                        <p>
+                            Atualmente cursando o ultimo ano do Ensino Médio em uma
+                            das escolas mais renomadas em Taubaté.
+                        </p>
+                    </div>
+                </div>
+                <!-- //Conteudo da timeline 1-->
+
+                <!-- Conteudo da timeline 2-->
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <span>Jan, 2020 - Jul, 2021</span>
+                        <h3>Desenvolvimento de Sistemas</h3>
+                        <h4>Senai Félix Guisard</h4>
+                        <p>
+                            Curso Técnico realizado na instituição Senai Félix Guisard onde
+                            tive a oportunidade de desenvolver vários assuntos como: trabalho em grupo,
+                            próatividade e as linguagens de programação como JavaScript e PHP.
+                        </p>
+                    </div>
+                </div>
+                <!-- //Conteudo da timeline 2-->
+                <!-- // Educação -->
+            </div>
+
+            <!-- Experiencias Profissionais -->
+            <div class="experiencias tab-content" data-aos="fade-up">
+                <div class="row">
+                    <h1>
+                        Não possuo nenhuma experiência profissional ainda <i class="far fa-frown-open"></i>.
+                        <span>Que tal me dar a primeira chance?</span>
+                    </h1>
+
+                    <a href="#contato">
+                        Entrar em Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //Experiencias Profissionais -->
+        <!-- // SOBRE MIM -->
+
+        <!-- PORTIFÓLIO -->
+        <div class="portifolio" id="portifolio" data-aos="fade-right" data-aos-duration="900">
+            <div class="container">
+                <div class="row">
+                    <div class="titulo">
+                        <h1>Portifólio</h1>
+                        <p>Meus trabalhos recentes</p>
+                    </div>
+                </div>
+                <div class="row portifolio-items">
+                    <!-- Portifolio projeto 1 -->
+                    <div class="portifolio-item">
+                        <div class="portifolio-item-capa">
+                            <img src="assets/img/foto 6.jpg" alt="capa">
+                            <a class="btn mais-info-btn">Mais Informações</a>
+                        </div>
+                        <h3 class="portifolio-item-titulo">Password Manager (CRUD)</h3>
+                        <div class="portifolio-item-detalhes">
+                            <div class="descricao">
+                                <p>
+                                    Estudando por conta própria, no meio da pândemia decidi desenvolver
+                                    alguma aplicação para dispositivos mobile, onde então me aventurei por
+                                    algumas semanas na linguagem Flutter. Se trata de um aplicativo onde 
+                                    o usuário pode armazenar, ver, editar e excluir suas senhas que possa
+                                    esquecer um dia (conhecido também como CRUD).
+                                </p>
+                            </div>
+
+                            <div class="informacoes-gerais">
+                                <p>Criado -<span>5 Jan 2021</span></p>
+                                <p>Tecnologias Usadas -<span> Flutter, Firebase</span></p>
+                                <p>Veja em -
+                                    <span>
+                                        <a style="box-shadow: none; background: none; color: var(--accent-color); margin: 0;"
+                                            href="https://github.com/bloodstormm/PasswordManager">https://github.com/bloodstormm/PasswordManager
+                                        </a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Portifolio projeto 1 -->
+
+                    <!-- Portifolio projeto 2 -->
+                    <div class="portifolio-item">
+                        <div class="portifolio-item-capa">
+                            <img src="assets/img/portifolio.png" alt="capa">
+                            <a class="btn mais-info-btn">Mais Informações</a>
+                        </div>
+                        <h3 class="portifolio-item-titulo">Meu Portifólio</h3>
+                        <div class="portifolio-item-detalhes">
+                            <div class="descricao">
+                                <p>
+                                    Este é o meu primeiro projeto de site pessoal. Resolvi desenvolvê-lo
+                                    com o intuíto de aproximar um pouco mais o contratante, conhecendo
+                                    algumas de minhas características e conhecimentos.
+                                </p>
+                            </div>
+
+                            <div class="informacoes-gerais">
+                                <p>Criado -<span> 7 Abr 2021</span></p>
+                                <p>Tecnologias Usadas -<span>HTML, CSS, JavaScript, PHP</span></p>
+                                <p>Veja em -
+                                    <span>
+                                        <a style="box-shadow: none; background: none; color: var(--accent-color); margin: 0;"
+                                            href="https://github.com/bloodstormm/Portifolio">https://github.com/bloodstormm/Portifolio
+                                        </a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Portifolio projeto 2 -->
+
+                    <!-- Portifolio projeto 3 -->
+                    <div class="portifolio-item">
+                        <div class="portifolio-item-capa">
+                            <img src="assets/img/kidelicia.png" alt="capa">
+                            <a class="btn mais-info-btn">Mais Informações</a>
+                        </div>
+                        <h3 class="portifolio-item-titulo">Ki-Delicia Sorvetes</h3>
+                        <div class="portifolio-item-detalhes">
+                            <div class="descricao">
+                                <p>
+                                    Ki-Delicia Sorvetes foi desenvolvido como um projeto enquanto cursava
+                                    Desenvolvimento de Sistemas no SENAI. É basicamente um website de delivery
+                                    de sorvetes, onde nos foi introduzido o Framework Bootstrap.
+                                </p>
+                            </div>
+
+                            <div class="informacoes-gerais">
+                                <p>Criado -<span> Nov 2020</span></p>
+                                <p>Tecnologias Usadas -<span> HTML, CSS, Bootstrap 5</span></p>
+                                <p>Veja em -
+                                    <span>
+                                        <a style="box-shadow: none; background: none; color: var(--accent-color); margin: 0;"
+                                            href="http://kideliciasorvetes.epizy.com/">http://kideliciasorvetes.epizy.com/</a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Portifolio projeto 3 -->
+                </div>
+            </div>
+        </div>
+        <!-- PORTIFÓLIO -->
+
+        <!-- PORTIFÓLIO POP-UP -->
+        <div class="portifolio-popup">
+            <div class="pp-inner">
+                <div class="pp-content">
+                    <div class="pp-header">
+                        <div class="pp-counter">
+                            <h3>
+                                <!-- Aqui vai a numeração dos projetos Ex: (1 de 3) -->
+                            </h3>
+                        </div>
+                        <i class="fa fa-times btn-fechar-pp"></i>
+                        <div class="pp-capa">
+                            <img src="assets/img/foto1.jpg" alt="">
+                        </div>
+                        <h2>
+                            <!-- Aqui vai o titulo -->
+                        </h2>
+                    </div>
+                    <div class="pp-body">
+                        <!-- Aqui vai o conteúdo -->
+                    </div>
+                    <!-- // Portifolio projeto 3 -->
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- // PORTIFÓLIO POP-UP -->
+
+
+        <!-- Entre em contato -->
+        <div class="contato" id="contato">
+            <div class="container">
+                <div class="titulo">
+                    <h1>Entre em Contato</h1>
+                </div>
+
+                <div class="contato-content">
+                    <div class="contato-texto">
+                        <p>
+                            Gostou do meu trabalho ou quer saber mais sobre mim?
+                            Aqui, pelo GitHub, não é possivel enviar formulários,
+                            porém você pode acessar meu site hospedado em outro lugar
+                            para enviar, ou se preferir, enviar um email.
+                        </p>
+                    </div>
+                    <div class="contato-info-item">
+                        <p>Meu email: <span>nicolasmalaquias2015@hotmail.com</span></p>
+                        <p>
+                            Meu Portifólio: 
+                            <a href="http://portifolioncls.ga/#contato" style="background: none;
+                            box-shadow: none; padding: 0;">
+                                <span>http://portifolioncls.ga</span>
+                            </a>
+                        </p>
+                        <div class="social-medias">
+                            <span>Me encontre também: </span> <br><br>
+
+                            <a href="https://www.linkedin.com/in/n%C3%ADcolas-malachias/" target="_blank" id="linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+
+                            <a href="https://api.whatsapp.com/send?phone=5512988770308" target="_blank" id="whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/_nicolasantoss/" target="_blank" id="instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://github.com/bloodstormm" target="_blank" id="github">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- // Entre em contato -->
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

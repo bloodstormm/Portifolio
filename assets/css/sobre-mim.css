@@ -1,0 +1,233 @@
+@import url(main.css);
+
+/* 
+------------------
+SOBRE MIM
+------------------
+*/
+
+.sobre-mim {
+    padding-top: 20px;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 84%;
+}
+
+.sobre-mim .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: unset;
+}
+
+.sobre-img img{
+    margin: auto;
+    transition: 400ms ease;
+    border-radius: 50%;
+    width: 80%;
+}
+
+.sobre-img img:hover {
+    box-shadow: 0 0 20px 5px var(--accent-color);
+}
+
+.sobre-mim .sobre-texto {
+    margin-right: 50px;
+    text-align: start;
+    max-width: 60%;
+}
+
+.sobre-texto p {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: start;
+}
+
+.sobre-botoes {
+    text-align: center;
+    padding: 60px 15px 50px;
+    flex: 0 0 100%;
+}
+
+.sobre-botoes .escolaridade {
+    color: var(--primary-color);
+    margin: 0 5px 10px;
+    transition: all 300ms ease;
+    border-radius: 30px;
+    border-color: var(--shadow-color);
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.sobre-botoes .escolaridade:hover:not(.active) {
+    color: var(--primary-color);
+}
+.sobre-botoes .escolaridade.active {
+    background-color: var(--accent-color);
+}
+
+.sobre-mim .tab-content {
+    display: none;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translatey(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.sobre-mim .tab-content.active {
+    display: flex;
+    animation: fadeInTop 0.5s ease;
+}
+
+/* Tab escolaridade */
+
+.sobre-mim .educacao {
+    max-width: 100%;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    position: relative;
+    margin: auto;
+}
+
+/* Bolinha na timeline */
+.timeline-dot {
+    color: var(--accent-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    margin-top: 5px;
+}
+
+/* Ano que aparece em cima da caixa */
+.timeline-date {
+    font-size: 16px;
+    color: var(--accent-color);
+    margin: 6px 0 15px;
+    font-weight: bold;
+}
+/* A caixa em si */
+.sobre-mim .timeline-item{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.educacao::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--shadow-color);
+    left: calc(50% - 1px);
+}
+/* caixas a esquerda  */
+.sobre-mim .timeline-item:nth-child(odd) {
+    text-align: end;
+    padding-right: calc(50% + 30px);
+}
+
+/* caixas a direita */
+.sobre-mim .timeline-item:nth-child(even) {
+    text-align: start;
+    padding-left: calc(50% + 30px);
+}
+
+/* texto a direita em caixas a esquerda  */
+.timeline-item:nth-child(odd) .timeline-content p {
+    text-align: end;
+}
+
+/* texto a esquerda em caixas a direita  */
+.timeline-item:nth-child(even) .timeline-content p {
+    text-align: start;
+}
+
+/* Conteudo dentro da caixa */
+.timeline-content {
+    color: var(--third-color);
+    background-color: var(--box-color2);
+    padding: 30px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+}
+
+.timeline-content h4 {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.timeline-content span {
+    font-weight: normal;
+}
+
+.experiencias {
+    width: 84%;
+    margin: auto;
+}
+
+.experiencias .row {
+    text-align: center;
+    display: block;
+}
+
+.experiencias h1 {
+    color: var(--third-color);
+}
+.experiencias h1:hover::after {
+    width: 100%;
+}
+/* Tirando o margin-bottom da ultima caixa */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .educacao::before {
+        left: 7px;
+    }
+
+    .sobre-mim .row {
+        text-align: center;
+    }
+    .sobre-img img{
+        width: 60%;
+    }
+
+    .sobre-mim a {
+        margin: auto;
+        margin-left: 10px;
+    }
+
+    .sobre-mim .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .sobre-mim .timeline-item:nth-child(odd),
+    .sobre-mim .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content p {
+        text-align: start;
+    }
+    
+    .timeline-dot {
+        left: 0;
+    }
+
+    .sobre-mim .row .sobre-texto {
+        padding-top: 10px;
+        margin: auto;
+    }
+    .sobre-texto p {
+        text-align: center;
+        font-size: 17px;
+    }
+}

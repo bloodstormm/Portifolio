@@ -1,0 +1,224 @@
+@import url(main.css);
+/* 
+------------------
+PORTIFÓLIO
+------------------
+*/
+.portifolio {
+    background-color: var(--pureWB-color);
+    width: 100%;
+    margin: auto;
+}
+
+.portifolio-item {
+    text-align: center;
+    width: calc((100% / 2) - 30px);
+    margin:0 15px 30px;
+}
+
+.portifolio-item-capa {
+    position: relative;
+}
+
+.portifolio .btn {
+    width: 45%;
+    text-align: center;
+    margin-top: 0;
+    background-color: var(--accent-color);
+    padding: 9px 25px;
+    font-size: 16px;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+}
+
+.portifolio-item-capa::before,
+.portifolio-item-capa::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: var(--shadow-color);
+    opacity: 0.8;
+    transition: height 400ms ease;
+}
+
+.portifolio-item-capa::before {
+    top: 0;
+}
+.portifolio-item-capa::after {
+    bottom: 0;
+}
+
+.portifolio-item:hover .portifolio-item-capa::before,
+.portifolio-item:hover .portifolio-item-capa::after {
+    height: 50%;
+}
+
+.portifolio-item-capa .btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.portifolio-item:hover .portifolio-item-capa .btn {
+    transition-delay: 150ms;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.portifolio-item-detalhes {
+    display: none;
+}
+
+
+.portifolio-item h3 {
+    font-size: 22px;
+    margin: 6px 0 5px;
+}
+/* 
+------------------
+PORTIFÓLIO POP-UP
+------------------
+*/
+
+.portifolio-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.portifolio-popup.open {
+    visibility: visible;
+}
+
+/* botao fechar animado */
+.pp-content i {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--secundary-color);
+    margin-bottom: 30px;
+    transition: all 400ms ease;
+}
+.pp-content i:hover {
+    transform: scale(1.2);
+    color: var(--accent-color);
+}
+.portifolio-popup::after {
+    right: 0;
+    bottom: 0;
+}
+.pp-inner {
+    background-color: var(--primary-color);
+    overflow-y: auto;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: all 500ms ease 500ms;
+}
+
+.portifolio-popup.open .pp-inner {
+    transform: translateY(0%);
+    transition-delay: 0s;
+}
+
+.pp-header {
+    position: relative;
+}
+
+/* titulo */
+.pp-header h2 {
+    color: var(--third-color);
+    font-size: 28px;
+    margin: 0 0 10px;
+}
+
+/* 3 de 3 (todos) */
+.pp-header h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.pp-header span {
+    font-weight: 400;
+}
+
+.pp-capa {
+    max-width: 800px;
+}
+
+.pp-content {
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+    max-width: 850px;
+    opacity: 0;
+    margin: 20px auto 60px;
+}
+
+.pp-content img {
+    border-radius: 8px;
+}
+
+.portifolio-popup.open .pp-content {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.5s;
+}
+
+.pp-content a {
+    margin: 0;
+    padding: 0;
+    background: none;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+
+.pp-body .informacoes-gerais p {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.pp-body .informacoes-gerais span {
+    padding-left: 0;
+    font-weight: 300;
+}
+
+.pp-body .informacoes-gerais a {
+    padding: 0;
+}
+
+.btn-fechar-pp {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media (max-width: 767px) {
+    .portifolio-item {
+        margin: auto;
+        margin-bottom: 30px;
+        width: calc(100% - 30px);
+    }
+
+    .pp-content {
+        margin: 30px;
+    }
+    .pp-content img {
+        border-radius: 10px;
+    }
+    .portifolio-item img {
+        margin: auto;
+        width: 200px;
+        padding: 0;
+    }
+}

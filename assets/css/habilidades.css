@@ -1,0 +1,57 @@
+@import url(main.css);
+/* 
+------------------
+HABILIDADES
+------------------
+*/
+
+.skills {
+    width: 100%;
+    background: var(--pureWB-color);
+    color: var(--secundary-color);
+    margin: auto;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.containerSkills {
+    width: 84%;
+    margin: auto;
+}
+
+/* Icones */
+.skills i {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.skills .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Blocos de habildades */
+.skillColumn {
+    cursor: default;
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    padding: 26px 12px;
+    padding-left: 40px;
+    background: var(--box-color);
+    line-height: 25px;
+    font-weight: 300;
+    padding-right: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 400ms;
+}
+
+.skillColumn:hover {
+    box-shadow: 0 0 20px 5px var(--shadow-color);
+}
+
+@media (max-width: 770px) {
+    .row {
+        flex-direction: column;
+    }
+}

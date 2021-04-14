@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap');
+@import url(home.css);
+@import url(habilidades.css);
+@import url(portifolio.css);
+@import url(contato.css);
+
+/* Toda a página */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Root e darktheme são os dois temas principais do app */
+:root {
+    --primary-color: #edf2fc;
+    --secundary-color: #212121;
+    --third-color: #606163;
+    --accent-color: #009fa5;
+    --shadow-color: #bdbaba;
+    --box-color: #fafafa;
+    --box-color2: #fafafa;
+    --pureWB-color: #fff;
+
+}
+
+.dark-theme {
+    --primary-color: #0e0e0e;
+    --secundary-color: #ffff;
+    --third-color: #d1d2d4;
+    --shadow-color: rgba(107, 107, 107, 0.349);
+    --box-color: #0c0c0c;
+    --box-color2: rgb(27, 27, 27);
+    --pureWB-color: #000;
+}
+
+/* 
+------------------
+ScrollBar Personalizada 
+------------------
+*/
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--third-color);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+    transition: 0.5s ease;
+
+}
+
+body.hide-scrolling {
+    overflow-y: hidden;
+}
+
+/* 
+------------------
+Fundo animado 
+------------------
+*/
+.bg-animated {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.bg-animated div {
+    height: 4px;
+    width: 4px;
+    background-color: var(--shadow-color);
+    margin-left: calc((100% - 40px) / 11);
+    border-radius: 50%;
+}
+
+.bg-animated div:nth-child(even) {
+    animation: evenItems 9s linear infinite;
+}
+@keyframes evenItems {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(12.5vh);
+    }
+    
+}
+.bg-animated div:nth-child(odd) {
+    animation: oddItems 7s linear infinite;
+}
+@keyframes oddItems {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(-12.5vh);
+    }
+    
+}
+
+@media (max-width: 845px) {
+    .bg-animated .col-10,
+    .bg-animated .col-9,
+    .bg-animated .col-8 {
+        display: none;
+    }
+        .bg-animated div {
+        margin-left: calc((100% - 28px) / 8);
+    }
+}
+@media (max-width: 770px) {
+    .bg-animated .col-7,
+    .bg-animated .col-6,
+    .bg-animated .col-5
+     {
+        display: none;
+    }
+    .bg-animated div {
+        margin-left: calc((100% - 10px) / 5);
+    }
+}
+.page .titulo {
+    margin: auto;
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.page img {
+    width: 100%;
+    background-size: cover;
+}
+
+.page h1 {
+    font-weight: 600;
+}
+
+.page button {
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.page h1::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--accent-color);
+    display: block;
+    margin: auto;
+    transition: 300ms;
+}
+
+.page h3{
+    color: var(--third-color);
+}
+
+.page h1:hover::after {
+    width: 30%;
+}
+.page .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.page p {
+    color: var(--third-color);
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+.page span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.page a {
+    transition: all 150ms linear;
+    background: var(--secundary-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+/* Botão Curriculo */
+.page a:hover {
+    box-shadow: 0 0 10px #006e72, 0 0 20px #00979c, 0 0 50px #00adb3;
+    background: var(--accent-color);
+}
