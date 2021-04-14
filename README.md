@@ -29,7 +29,7 @@ Para alguma das animações de scroll do site, usei uma biblioteca do **michalsn
 
 ---
 
-## 🤔 Onde ver o site?:
+# 🤔 Onde ver o site?:
 
 Este é link para ver o Portifólio no GitHub: 
 > https://bloodstormm.github.io/Portifolio/
